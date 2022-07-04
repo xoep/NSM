@@ -41,6 +41,8 @@ I'd suggest reading all configurations to understand its capabilities and scalab
 My Configuration files are available in config directory
 
 Setting up Filebeat
-filebeat modules enable zeek
-filebeat modules suricata enable
+  filebeat modules enable zeek
+  filebeat modules suricata enable
+  
+  
 
