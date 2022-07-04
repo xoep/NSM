@@ -39,3 +39,8 @@ Similarly with FileBeat too
   https://www.elastic.co/guide/en/beats/filebeat/7.17/filebeat-installation-configuration.html
 I'd suggest reading all configurations to understand its capabilities and scalability.
 My Configuration files are available in config directory
+
+Setting up Filebeat
+filebeat modules enable zeek
+filebeat modules suricata enable
+
