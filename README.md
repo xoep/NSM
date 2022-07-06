@@ -43,6 +43,6 @@ My Configuration files are available in config directory
 Setting up Filebeat
   filebeat modules enable zeek
   filebeat modules suricata enable
-  
-  
+  zeekctl deploy
+
 
