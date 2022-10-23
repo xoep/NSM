@@ -48,6 +48,25 @@ Setting up Filebeat
   
   zeekctl deploy 
 
+Add following lines to Suricata
+  #Location: /etc/suricata/suricata.yml
+rule-files:
+  - suricata.rules
+
+detect-engine:
+  - rule-reload: true
+
+Add following lines to zeek
+  #location- /opt/zeek/etc/node.cfg
+  [zeek]
+type=standalone
+host=zeeks-IP
+interface=network-interface name
+  
 Changes to be made with filebeat config file included in this repo.
 
+Reference articles -
+  https://isc.sans.edu/forums/diary/Building+an+IDS+Sensor+with+Suricata+Zeek+with+Logs+to+ELK/27296/
+  https://www.opensourceforu.com/2022/06/integrating-zeek-with-elk-stack/
+  https://www.digitalocean.com/community/tutorials/how-to-build-a-siem-with-suricata-and-elastic-stack-on-ubuntu-20-04
  
