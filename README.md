@@ -12,29 +12,29 @@ Setup the Ubuntu instance and add 2 adapters to the Virtual Machine
 ![image](https://user-images.githubusercontent.com/30376802/176098974-e4eff834-57d5-47dd-a255-67a9c727bc6f.png)
 You can keep both adapters on NAT or Bridge
 
-Install net-tools
+- Install net-tools
 apt-get install net-tools
 
-Setup Promiscuous mode
+- Setup Promiscuous mode
 ifconfig adpter-name <eth0> promisc
 
-Install Suricata
+- Install Suricata
 apt-get update && apt-get install suricata
 
-Install Zeek
+- Install Zeek
   git clone --recursive https://github.com/zeek/zeek
   ./configure && make && sudo make install
 refer - https://github.com/zeek/zeek
 
-Install ElasticSearch
+- Install ElasticSearch
 Installation of ElasticSearch varies depending on which version you install, I used 7.x so will attach link to that, since I used Debian as my bas OS but ElasticSearch can be installed on other platform too
   https://www.elastic.co/guide/en/elasticsearch/reference/7.17/install-elasticsearch.html
 
-Install Kibana
+- Install Kibana
 Installting Kibana will follow similar process as ElasticSearch
   https://www.elastic.co/guide/en/kibana/7.17/install.html
 
-Installing FileBeat
+- Installing FileBeat
 Similarly with FileBeat too
   https://www.elastic.co/guide/en/beats/filebeat/7.17/filebeat-installation-configuration.html
 I'd suggest reading all configurations to understand its capabilities and scalability.
@@ -48,25 +48,25 @@ Setting up Filebeat
   
   zeekctl deploy 
 
-Add following lines to Suricata
+- Add following lines to Suricata
   #Location: /etc/suricata/suricata.yml
-rule-files:
-  - suricata.rules
+  rule-files:
+    - suricata.rules
 
-detect-engine:
-  - rule-reload: true
+  detect-engine:
+    - rule-reload: true
 
-Add following lines to zeek
-  #location- /opt/zeek/etc/node.cfg
-  [zeek]
-type=standalone
-host=zeeks-IP
-interface=network-interface name
+- Add following lines to zeek
+    #location- /opt/zeek/etc/node.cfg
+      [zeek]
+      type=standalone
+      host=zeeks-IP
+      interface=network-interface name
   
 Changes to be made with filebeat config file included in this repo.
 
 Reference articles -
-  https://isc.sans.edu/forums/diary/Building+an+IDS+Sensor+with+Suricata+Zeek+with+Logs+to+ELK/27296/
-  https://www.opensourceforu.com/2022/06/integrating-zeek-with-elk-stack/
-  https://www.digitalocean.com/community/tutorials/how-to-build-a-siem-with-suricata-and-elastic-stack-on-ubuntu-20-04
+  - https://isc.sans.edu/forums/diary/Building+an+IDS+Sensor+with+Suricata+Zeek+with+Logs+to+ELK/27296/
+  - https://www.opensourceforu.com/2022/06/integrating-zeek-with-elk-stack/
+  - https://www.digitalocean.com/community/tutorials/how-to-build-a-siem-with-suricata-and-elastic-stack-on-ubuntu-20-04
  
