@@ -40,9 +40,22 @@ Similarly with FileBeat too
 I'd suggest reading all configurations to understand its capabilities and scalability.
 My Configuration files are available in config directory
 
-Setting up Filebeat
-  filebeat modules enable zeek
-  filebeat modules suricata enable
-  zeekctl deploy
+Setting up Filebeat 
+
+  filebeat modules enable zeek 
+  
+  filebeat modules suricata enable 
+  
+  zeekctl deploy 
+
+Changes to be made 
+
+/etc/filebeat/modules.d/suricata.yml
+![image](https://user-images.githubusercontent.com/30376802/197379013-7dd85961-c2bb-4764-9a79-88eb75121c40.png)
+
+/etc/filebeat/modules.d/zeek.yml
+
+
+
 
 
