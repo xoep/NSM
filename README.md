@@ -48,14 +48,6 @@ Setting up Filebeat
   
   zeekctl deploy 
 
-Changes to be made 
+Changes to be made with config file included in this repo under directory configurations
 
-/etc/filebeat/modules.d/suricata.yml
-![image](https://user-images.githubusercontent.com/30376802/197379013-7dd85961-c2bb-4764-9a79-88eb75121c40.png)
-
-/etc/filebeat/modules.d/zeek.yml
-
-
-
-
-
+ 
