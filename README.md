@@ -48,6 +48,6 @@ Setting up Filebeat
   
   zeekctl deploy 
 
-Changes to be made with config file included in this repo under directory configurations
+Changes to be made with filebeat config file included in this repo.
 
  
